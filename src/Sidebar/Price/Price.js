@@ -6,6 +6,8 @@ import "./Price.css";
 
 // Khai báo component Price nhận prop handleChange để xử lý sự kiện khi thay đổi
 const Price = ({ handleChange }) => {
+
+
   return (
     // Phần giao diện của component Price
     <>
@@ -22,29 +24,29 @@ const Price = ({ handleChange }) => {
         {/* Các lựa chọn còn lại, sử dụng component Input */}
         <Input
           handleChange={handleChange}
-          value={50}
-          title="$0 - 50"
+          value={500000}
+          title="0 - 500k"
           name="test2"
         />
 
         <Input
           handleChange={handleChange}
-          value={100}
-          title="$50 - $100"
+          value={1000000}
+          title="500k - 1tr"
           name="test2"
         />
 
         <Input
           handleChange={handleChange}
-          value={150}
-          title="$100 - $150"
+          value={1500000}
+          title="1tr - 1,5tr"
           name="test2"
         />
 
         <Input
           handleChange={handleChange}
-          value={200}
-          title="Over $150"
+          value={2000000}
+          title="Trên 1,5tr"
           name="test2"
         />
       </div>

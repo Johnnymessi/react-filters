@@ -3,7 +3,10 @@ import { useState } from "react";
 
 // Import các component cần thiết
 import Navigation from "./Navigation/Nav";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 import Products from "./Products/Products";
+// import ProductDetail from "./ProductDetail/ProductDetail";
 import products from "./db/data";
 import Recommended from "./Recommended/Recommended";
 import Sidebar from "./Sidebar/Sidebar";
@@ -90,6 +93,12 @@ function App() {
       <Navigation query={query} handleInputChange={handleInputChange} />
       <Recommended handleClick={handleClick} />
       <Products result={result} />
+      {/* <Router>
+       <Routes>
+         <Route path="/" exact component={Products} />
+         <Route path="/product/:productId" component={ProductDetail} />
+       </Routes>
+     </Router> */}
     </>
   );
 }

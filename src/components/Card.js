@@ -22,12 +22,15 @@ const Card = ({ img, title, star, reviews, prevPrice, newPrice }) => {
             {star} {star} {star} {star}
             <span className="total-reviews">{reviews}</span>
           </section>
-          
+
           {/* Phần giá sản phẩm */}
           <section className="card-price">
             {/* Giá trước giảm giá và giá mới */}
             <div className="price">
-              <del>{prevPrice}</del> {newPrice}
+              {/* <del>{prevPrice}</del> {newPrice} */}
+
+              <p>{parseInt(newPrice).toLocaleString() + 'vnđ'}</p>
+
             </div>
 
             {/* Biểu tượng túi mua sắm */}
